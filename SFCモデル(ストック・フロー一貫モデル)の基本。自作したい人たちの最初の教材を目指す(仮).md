@@ -667,6 +667,12 @@ SFCモデルの強みの一つは、採用する仮定に課される制限が�
 通常、DSGEモデルが長期的には供給主導であるのに対し、SFCモデルは短期でも長期でも需要主導である。SFCモデルは、社会階層や階層別の分配をモデル化するのに適する。一方、DSGEモデルは代表的個人の視点（最近は代表的個人を用いないこともあるようだが）から最適化問題を解く。SFCモデルは資本主義の記述にも適している一方、DSGEモデルは資本主義的ではなく、市場社会主義的なモデルである。
 
 ### １２，類似or発展的or補完的 情報源
+◎当ブログの、SFCモデルの例示
+
+行動方程式と会計恒等式を、どのように組み合わせてどのような順番で計算しているのか、イメージしやすくなるかもしれない。理解するために、プログラミング言語の知識が少しだけ必要かもしれない。
+- [英語WikipediaのSFCモデルのページの、The model structureの節のグラフを再現](https://rokabonatttsu.hatenablog.com/entry/2022/12/26/165722)
+- [AB-SFCモデルを作るための諸々の小手調べのために、初めてJuliaで書いた自作SFCモデル（2023年10月6日時点で未完成）](https://rokabonatttsu.hatenablog.com/entry/2023/09/26/001536)
+
 ◎外部のブログなど
 - [Stock-flow consistent model - Wikipedia](https://en.wikipedia.org/wiki/Stock-flow_consistent_model)
 - [Stock-Flow Consistent Model - encyclopedia.pub](https://encyclopedia.pub/entry/30190)
