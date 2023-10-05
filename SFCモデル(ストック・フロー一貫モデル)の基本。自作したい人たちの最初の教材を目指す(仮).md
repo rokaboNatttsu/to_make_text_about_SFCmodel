@@ -442,9 +442,9 @@ $$W＝W_{-1} + δ \frac{Y_{-1}}{K}$$
 
 $$
     \begin{pmatrix}
-        D_{+1}\\
-        A_{ST+1}\\
-        P_{LT+1}A_{LT+1}
+        D\\
+        A_{ST}\\
+        P_{LT}A_{LT}
     \end{pmatrix}
     =
     \begin{pmatrix}
@@ -492,7 +492,7 @@ $λ_{ij}$：(”定型化された事実”に基づく？)パラメータ
 
 $\lambda_{i0}$ は各資産の”normalな”保有割合。
 
-$\lambda$ には、 $V_{+1} = D_{+1} + A_{ST+1} + P_{LT+1}A_{LT+1} = V + YD$ を常に成立させるために満たすべき必須条件が存在する
+$\lambda$ には、 $V = D + A_{ST} + P_{LT}A_{LT}$ を常に成立させるための必要十分条件が存在する
 
 $$
     \begin{matrix}
