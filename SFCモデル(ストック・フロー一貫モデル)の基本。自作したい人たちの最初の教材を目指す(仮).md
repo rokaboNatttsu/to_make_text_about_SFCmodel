@@ -442,9 +442,9 @@ $$W＝W_{-1} + δ \frac{Y_{-1}}{K}$$
 
 $$
     \begin{pmatrix}
-        D\\
-        A_{ST}\\
-        P_{LT}A_{LT}
+        D_{+1}\\
+        A_{ST+1}\\
+        P_{LT+1}A_{LT+1}
     \end{pmatrix}
     =
     \begin{pmatrix}
@@ -452,7 +452,7 @@ $$
         \lambda_{20}\\
         \lambda_{30}
     \end{pmatrix}
-    V + 
+    V_{+1} + 
     \begin{pmatrix}
         \lambda_{11} & \lambda_{12} & \lambda_{13}\\
         \lambda_{21} & \lambda_{22} & \lambda_{23}\\
@@ -463,13 +463,13 @@ $$
         i_{ST}\\
         i_{LT}
     \end{pmatrix}
-    V +
+    V_{+1} +
     \begin{pmatrix}
         \lambda_{14}\\
         \lambda_{24}\\
         \lambda_{34}
     \end{pmatrix}
-    YD
+    Y
 $$
 
 $D$：(要求払)預金
@@ -484,63 +484,55 @@ $V$：資産総額
 
 $i$：収益率。 $i_X$ はXの収益率
 
-$YD$ : 可処分所得
+$Y$ : 所得
 
 $λ_{ij}$：(”定型化された事実”に基づく？)パラメータ
 
-期首の資産総額・利回りや金利・今期の収益が原因となって、期末の資産の配分という結果が計算される。というモデルだとわかる。
+期末の資産総額・各金融資産それぞれの今期の収益率・今期の所得が原因となって、期末の資産の配分という結果が計算される。というモデルだとわかる。
 
-$\lambda_{i0}$ は各資産の”normalな”保有割合。
+資産総額と、各資産保有額の合計を、常に一致させるような $\lambda_{ij}$ を採用しなければならない。 $\lambda_{ij}$ の選び方の中でも、特に綺麗な十分条件が存在する。例えば上のポートフォリオ方程式の例の $\lambda_{ij}$ だと、 $V = D + A_{ST} + P_{LT}A_{LT}$ を常に成立させる、以下のような綺麗な十分条件（垂直制約：vertical conditions）が存在する。
 
-$\lambda$ には、 $V = D + A_{ST} + P_{LT}A_{LT}$ を常に成立させる、以下のような綺麗な十分条件が存在する。この条件は必ず満たされなければならない。
+$\lambda_{10}+\lambda_{20}+\lambda_{30}=1$
 
-$$
-    \begin{matrix}
-        \lambda_{10}+\lambda_{20}+\lambda_{30}=1\\
-        \lambda_{11}+\lambda_{21}+\lambda_{31}=0\\
-        \lambda_{12}+\lambda_{22}+\lambda_{32}=0\\
-        \lambda_{13}+\lambda_{23}+\lambda_{33}=0\\
-        \lambda_{14}+\lambda_{24}+\lambda_{34}=0
-    \end{matrix}
-$$
+$\lambda_{11}+\lambda_{21}+\lambda_{31}=0$
 
-$\lambda_{i0} > 0 \ \forall i \in \{1,2,3\}$
+$\lambda_{12}+\lambda_{22}+\lambda_{32}=0$
 
-ベクトルや行列を用いた行動方程式がメジャーなのは、このような式とセットで、資産配分の整合性を保ちつつ簡潔に記述できるから、だと思われる。上に加えて、下の条件も満たしていることが望ましいとされる（ことが多い？）。
+$\lambda_{13}+\lambda_{23}+\lambda_{33}=0$
 
-$$
-    \begin{matrix}
-        \lambda_{ii}>0\\
-        \lambda_{ij}=\lambda_{ji}<0
-    \end{matrix}
-$$
+$\lambda_{14}+\lambda_{24}+\lambda_{34}=0$
 
-ただし $i \neq j$
+$\lambda_{i0}$：各資産の”normalな”保有割合。金融資産の収益率が０で、所得も０のときの保有割合。$0 \leq \lambda_{i0} \leq 1 \ \forall i \in \{1,2,3\}$
 
-$\lambda_{ii} > 0$ および $\lambda_{ij} < 0 \ \ \  (i \neq j)$ は、金利・利回りが高い資産は多めに保有するインセンティブが働くということ。
+ベクトルや行列を用いた行動方程式がメジャーなのは、このような式とセットで、資産配分の整合性を保ちつつ簡潔に記述できるから、だと思われる。上に加えて、下の条件も満たしていることが望ましいとされることが多い。
 
-$\lambda_{ij} = \lambda_{ji}$ は、2種類の資産の金利・利回りが同時に同じだけ増減するとき（例えば国債利回りと配当利回りが同時に1％上昇するとき）は、2つの資産の保有額の差が変化しない。
+$\lambda_{ii}>0$
 
-$$
-    \begin{matrix}
-        \lambda_{11}+\lambda_{21}+\lambda_{31}=0\\
-        \lambda_{12}+\lambda_{22}+\lambda_{32}=0\\
-        \lambda_{13}+\lambda_{23}+\lambda_{33}=0\\
-        \lambda_{ij} = \lambda_{ji}
-    \end{matrix}\\
-$$
+$\lambda_{ij}=\lambda_{ji}<0$
+
+ただし $i \neq j, \forall i \in \{1,2,3\}, \forall j \in \{1,2,3\}$
+
+$\lambda_{ii} > 0$ および $\lambda_{ij} < 0$ は、金利・利回りが高い資産は多めに保有するインセンティブが働くということ。
+
+$\lambda_{ij} = \lambda_{ji}$ のニュアンスは、「金融資産①の資本収益率が $\Delta i$ 上がった時の、金融資産②の保有額の減少量が、金融資産②の資本収益率が $\Delta i$ 上がった時の、金融資産①の保有額の減少量と等しい。」といった感じ。
+
+$\lambda_{11}+\lambda_{21}+\lambda_{31}=0$
+
+$\lambda_{12}+\lambda_{22}+\lambda_{32}=0$
+
+$\lambda_{13}+\lambda_{23}+\lambda_{33}=0$
+
+$\lambda_{ij} = \lambda_{ji} \ \ \ (i \neq j, \forall i \in \{1,2,3\}, \forall j \in \{1,2,3\})$
 
 が満たされているとき、
 
-$$
-\begin{matrix}
-        \lambda_{11}=-(\lambda_{12}+\lambda_{13})\\
-        \lambda_{22}=-(\lambda_{21}+\lambda_{23})\\
-        \lambda_{33}=-(\lambda_{31}+\lambda_{32})
-\end{matrix}
-$$
+$\lambda_{11}=-(\lambda_{12}+\lambda_{13})$
 
-も成り立つ。
+$\lambda_{22}=-(\lambda_{21}+\lambda_{23})$
+
+$\lambda_{33}=-(\lambda_{31}+\lambda_{32})$
+
+も成り立つ。（水平制約：horizontal constraints）
 
 <font color="Green">このような資産や収益に対して線形の関係でポートフォリオ選択を表現するモデルが、どの程度現実に説明能力を持つのかは私は知らないが、SFCモデルの中でよく使われている印象はある。非線形な関数でも連続である限りは局所的には線形っぽいので、想定される位置の周りで線形のモデルを使おうってのは、ありそうな話。</font>
 
