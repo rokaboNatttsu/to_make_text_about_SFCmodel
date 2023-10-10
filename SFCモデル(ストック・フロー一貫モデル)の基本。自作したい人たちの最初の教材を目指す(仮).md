@@ -526,8 +526,8 @@ $$
         \lambda_{11}+\lambda_{21}+\lambda_{31}=0\\
         \lambda_{12}+\lambda_{22}+\lambda_{32}=0\\
         \lambda_{13}+\lambda_{23}+\lambda_{33}=0\\
+        \lambda_{ij} = \lambda_{ji}
     \end{matrix}\\
-    \lambda_{ij} = \lambda_{ji}
 $$
 
 が満たされているとき、
