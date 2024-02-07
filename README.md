@@ -8,7 +8,7 @@ PDFファイルはリンクが機能しない。
 
 ### 作業用メモ
 
-- 作業進捗は[ここ](https://github.com/users/rokaboNatttsu/projects/2)で管理する
+- rokaboNatttsuは作業進捗を[ここ](https://github.com/users/rokaboNatttsu/projects/2)で管理している
 - 出典をつける。
   - 論文：著者,"題名",*雑誌名（イタリック）*,ページ番号など
   - 書籍：著者名（編者名、訳者名）、『書名（版、シリーズ、巻数）』、出版社名、出版年、ページ、ISBN
