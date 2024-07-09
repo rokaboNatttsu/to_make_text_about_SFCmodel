@@ -1,5 +1,6 @@
 Mermaid記法テスト
-```stateDiagram-v2
+```mermaid
+stateDiagram-v2
     [*] --> Still
     Still --> [*]
     Still --> Moving
